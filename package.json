@@ -4,6 +4,7 @@
         "node": "22.14.0"
     },
     "scripts": {
+        "make-map": "node ./src/cli/make-map.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
