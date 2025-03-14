@@ -7,19 +7,19 @@ import { handleCrossroad } from "./handle-crossroad.js";
  * @type {import("./type.js").CharacterHandler}
  */
 export function handleTurn(map, position, direction) {
-    const allDirs = getAllDirections(map, position);
+    const allDirections = getAllDirections(map, position);
 
-    const allPotentialDirs = getAllDirections(map, position).filter((d) =>
-        PERPENDICULAR_DIRECTION[direction].includes(d),
-    );
-
-    if (allDirs.length === 0) {
+    if (allDirections.length < 2) {
         throw new Error(BROKEN_PATH, {
             cause: `row=${position[0]}\ncol=${position[1]}`,
         });
     }
 
-    if (allPotentialDirs.length === 0) {
+    const perpendicularDirections = allDirections.filter((d) =>
+        PERPENDICULAR_DIRECTION[direction].includes(d),
+    );
+
+    if (perpendicularDirections.length === 0) {
         throw new Error(FAKE_TURN_REACHED, {
             cause: `row=${position[0]}\ncol=${position[1]}`,
         });

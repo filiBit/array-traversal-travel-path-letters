@@ -16,6 +16,7 @@ export function handleCrossroad(map, position, direction) {
     CrossroadRepository.lockGate(position, OPPOSITE_DIRECTION[direction]);
 
     let availableDirections = getUnexploredDirections(map, position, direction);
+
     const allDirections = getAllDirections(map, position);
 
     if (allDirections.length === 3) {
