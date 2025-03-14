@@ -10,8 +10,8 @@ import {
     MULTIPLE_START_CHARACTERS,
     MULTIPLE_STARTING_PATHS,
     UNSUPPORTED_CHARACTER,
-} from "./errors";
-import { travel } from "./travel";
+} from "./errors.js";
+import { travel } from "./travel.js";
 
 describe("Given the `map` argument has an invalid type", () => {
     test("Then an Error is thrown", () => {
