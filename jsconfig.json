@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
-        "module": "ESNext",
-        "target": "ESNext",
+        "module": "NodeNext",
+        "moduleResolution": "nodenext",
+        "esModuleInterop": false,
+        "target": "ES2024",
         "checkJs": true,
         "strict": true
     },
