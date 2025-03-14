@@ -2,8 +2,7 @@
     "name": "ss-code-challenge",
     "type": "module",
     "engines": {
-        "node": "22.14.0",
-        "deno": "2.1.1"
+        "node": "22.14.0"
     },
     "scripts": {
         "make-map": "node ./src/cli/make-map.js",
