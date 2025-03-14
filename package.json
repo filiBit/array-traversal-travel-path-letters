@@ -8,6 +8,7 @@
     "scripts": {
         "make-map": "node ./src/cli/make-map.js",
         "travel": "node ./src/cli/travel.js",
+        "playground": "node src/index.js",
         "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest"
     },
     "devDependencies": {
