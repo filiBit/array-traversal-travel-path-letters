@@ -24,7 +24,7 @@ step1-->step2c1--->step2c2-->step3
 
 ## Techstack
 
-- node
+- node `v22.14.0`
 - Javascript
 - JSDoc
 - Jest
