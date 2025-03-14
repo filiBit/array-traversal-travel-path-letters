@@ -2,10 +2,12 @@
     "name": "ss-code-challenge",
     "type": "module",
     "engines": {
-        "node": "22.14.0"
+        "node": "22.14.0",
+        "deno": "2.1.1"
     },
     "scripts": {
         "make-map": "node ./src/cli/make-map.js",
+        "travel": "node ./src/cli/travel.js",
         "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest"
     },
     "devDependencies": {
