@@ -1,7 +1,27 @@
+import {
+    TURN_CHARACTER,
+    LETTERS,
+    ROAD_HORIZONTAL,
+    ROAD_VERTICAL,
+    END_CHARACTER,
+} from "../characters.js";
+import { handleEnd } from "./handle-end.js";
+import { handleLetter } from "./handle-letter.js";
+import { handleRoad } from "./handle-road.js";
+import { handleTurn } from "./handle-turn.js";
+
 /**
  * @type {{ characters: Set<string>, handle: import("./type.js").CharacterHandler}[]}
  */
-export const Handlers = [];
+export const Handlers = [
+    { characters: LETTERS, handle: handleLetter },
+    { characters: new Set([TURN_CHARACTER]), handle: handleTurn },
+    {
+        characters: new Set([ROAD_HORIZONTAL, ROAD_VERTICAL]),
+        handle: handleRoad,
+    },
+    { characters: new Set([END_CHARACTER]), handle: handleEnd },
+];
 
 /**
  * @type {import("./type.js").CharacterHandler}
